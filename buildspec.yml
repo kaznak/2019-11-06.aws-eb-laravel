@@ -4,9 +4,11 @@ phases:
   install:
     runtime-versions:
       php: 7.3
-    commands: []
+    commands:
+      - composer install
   build:
     commands:
+      - printenv
       - cp .env.example .env
       - php artisan key:generate
 
