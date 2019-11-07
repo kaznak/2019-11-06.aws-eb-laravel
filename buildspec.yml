@@ -1,0 +1,30 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      php: 7.3
+    commands: []
+  build:
+    commands:
+      - cp .env.example .env
+      - php artisan key:generate
+
+artifacts:
+  files:
+    - .env
+    - app/**/*
+    - artisan
+    - bootstrap/**/*
+    - composer.json
+    - composer.lock
+    - config/**/*
+    - database/**/*
+    - package.json
+    - phpunit.xml
+    - public/**/*
+    - resources/**/*
+    - routes/**/*
+    - server.php
+    - storage/**/*
+    - webpack.mix.js
